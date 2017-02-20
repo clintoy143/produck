@@ -11,8 +11,12 @@ class DistributorsController < ApplicationController
     
     def create
         @distributor = Distributor.create(distributor_params)
-        if @distributor.save 
-            redirect_to '/'            
+        if @distributor.save
+            flash.now[:success] = "You have successfully created your account!"
+            redirect_to '/' # "suppliers_path"
+        else
+            flash.now[:danger] = "Oops, something went wrong."
+            render 'new'
         end
     end
     
