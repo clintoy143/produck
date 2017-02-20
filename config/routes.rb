@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :products
   end
   
-  resources :distributors
+  resources :distributors do 
+    resource :profile
+  end
   
   root 'blanks#home'
 
