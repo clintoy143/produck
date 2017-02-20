@@ -1,0 +1,46 @@
+<div class="container-fluid" id="home">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+            <div class="call-pos">
+                <div class="inner">
+                    <h3 class="alfa">Apply Now</h3>
+                    <p class="catch-phrase">
+                        A large pool of suppliers within your reach ready to have you as their partners in business.
+                        What are you waiting for? Start your entrepreneurial journey today.
+                    </p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    
+                    <%= link_to "Become a distributor", root_path , class:"btn btn-primary"%>
+                </div>    
+            </div>    
+        </div>        
+        <div class="col-md-offset-1 col-md-6">
+            <div class="heading-position text-center">
+                <h1 class="montserrat">
+                    <span style="letter-spacing: 1px;">
+                        <strong>The secret of getting ahead is getting started</strong>
+                    </span>
+                </h1>
+                - Mark Twain -
+            </div>    
+        </div>
+
+    </div>
+</div>
+
+<!-- Use this script to arrest window height on viewport -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var height = $(window).height();
+        
+        $("#home").css({
+            "height": height,
+        });
+    });
+</script>
