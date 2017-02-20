@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220120311) do
+ActiveRecord::Schema.define(version: 20170220125450) do
+
+  create_table "distributor_profiles", force: :cascade do |t|
+    t.integer  "distributor_id"
+    t.string   "name"
+    t.string   "last_name"
+    t.text     "address"
+    t.string   "contact_number"
+    t.integer  "age"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["distributor_id"], name: "index_distributor_profiles_on_distributor_id"
+  end
+
+  create_table "distributors", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["email"], name: "index_distributors_on_email"
+  end
 
   create_table "products", force: :cascade do |t|
     t.integer  "supplier_id"
