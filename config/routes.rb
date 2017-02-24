@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   
   resources :distributors do 
-    resource :profile
+    resource :distributor_profile
   end
   
   root 'blanks#home'

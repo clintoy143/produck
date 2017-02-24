@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-md-offset-4 col-md-4">
+        <%= form_for @supplier do |sup| %>
+            <div class="form-group">
+                <%= sup.label :email %>
+                <%= sup.email_field :email, class:"form-control"%>
+            </div>
+            <div class="form-group">
+                <%= sup.label :name %>
+                <%= sup.text_field :name, class:"form-control"%>
+            </div>
+            <div class="form-group">
+                <%= sup.label :password %>
+                <%= sup.password_field :password_digest, class:"form-control"%>
+            </div>
+            <div class="form-group">
+            <%= sup.label :confirm_password %>
+            <%= sup.password_field :password_digest_confirmation, class:"form-control"%>
+            </div>
+            <div class="form-group">
+            <%= sup.submit "Create account", class:"btn btn-success" %>
+            </div>
+            
+        <% end%>
+    </div>
+</div>
