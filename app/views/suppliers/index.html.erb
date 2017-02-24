@@ -1,0 +1,21 @@
+<div class="container-fluid" id="supplier-wrapper">
+ 
+    <div class="row">
+        <h1>Start looking for your Entrepreneurial partner</h1>
+        <%= link_to "Logout", logout_path, method: :delete%>
+        <%= link_to "create profile", new_distributor_distributor_profile_path(current_distributor)  %>
+    </div>
+    <div class="container">
+        <div class="row">
+            
+            <% @supplier.each do |s| %>
+                <div class="col-md-3">
+                    <%= s.name %><br />
+                    <%= s.email %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+</div>
+

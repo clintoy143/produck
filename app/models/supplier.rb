@@ -6,4 +6,5 @@ class Supplier < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
     has_secure_password                
+    has_one :supplier_profile
 end

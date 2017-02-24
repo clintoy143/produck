@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   resources :suppliers do
     resources :products
+    resource :supplier_profile
   end
   
   resources :distributors do 

@@ -3,6 +3,6 @@ class Distributor < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-    has_secure_password
     has_one :distributor_profile
+    has_secure_password
 end

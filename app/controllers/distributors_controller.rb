@@ -1,4 +1,5 @@
 class DistributorsController < ApplicationController
+    
     def index
     end
     
@@ -14,7 +15,7 @@ class DistributorsController < ApplicationController
         if @distributor.save
             flash.now[:success] = "You have successfully created your account!"
             session[:user_id] = @distributor.id
-            redirect_to '/' # "suppliers_path"
+            redirect_to suppliers_path # "suppliers_path"
         else
             flash.now[:danger] = "Oops, something went wrong."
             render 'new'
@@ -23,6 +24,6 @@ class DistributorsController < ApplicationController
     
     private
         def distributor_params
-            params.require(:distributor).permit(:email, :password_digest)
+            params.require(:distributor).permit(:email, :password)
         end
 end
