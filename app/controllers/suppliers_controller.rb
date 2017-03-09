@@ -1,11 +1,11 @@
 class SuppliersController < ApplicationController
-    before_action :authorize_distributor, only: [:index]
     
     def index
         @supplier = Supplier.all
     end
     
     def show
+        @supplier = Supplier.find(params[:id])
     end
     
     def new
@@ -15,7 +15,7 @@ class SuppliersController < ApplicationController
     def create
         @supplier = Supplier.create(supplier_params)
         if @supplier.save
-            redirect_to suppliers_path
+            redirect_to root_path
         else
             render "new"
         end

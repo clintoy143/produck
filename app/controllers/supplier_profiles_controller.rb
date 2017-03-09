@@ -1,0 +1,2 @@
+class SupplierProfilesController < ApplicationController
+end

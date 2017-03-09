@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container-fluid form-bg">
 
-    <div class="row">
+    <div class="row" id="dist-form">
         <div class="col-md-offset-4 col-md-4">
             <div class="well">
-                <h2>Sign up for Distributor</h2>
+                <h2 class="montserrat">Sign up as Distributor</h2>
                 <%= form_for @distributor do |d|%>
                     <div class="form-group">
                         <%= d.label :email %>
@@ -23,3 +23,15 @@
         </div>
     </div>    
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var height = $(window).height();
+        var minus = $("#dist-form").height();
+        var pos = height - minus;
+        var h = (height - pos) / 3;
+        
+        $("#dist-form").css("margin-top", h);
+        $(".form-bg").css({"height": height});
+    });
+</script>

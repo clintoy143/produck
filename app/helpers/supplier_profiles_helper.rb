@@ -1,0 +1,2 @@
+module SupplierProfilesHelper
+end

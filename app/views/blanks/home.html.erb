@@ -1,4 +1,7 @@
 <div class="container-fluid" id="home">
+    <div class="text-center">
+        <%= render "shared/nav" %>
+    </div>    
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
             <div class="call-pos">
@@ -10,12 +13,9 @@
                     </p>
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    
-                    <%= link_to "Become a distributor", new_distributor_path , class:"btn btn-primary"%>
+                    <p><%= link_to "Be a distributor", new_distributor_path , class:"btn btn-primary btn-lg"%></p>
+                    <p>- OR - </p>
+                    <p><%= link_to "Proceed as visitor", suppliers_path, class:"btn btn-warning" %></p>
                 </div>    
             </div>    
         </div>        

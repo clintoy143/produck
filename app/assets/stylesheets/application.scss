@@ -15,5 +15,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "blanks.scss";
+@import "suppliers.scss";
+@import "distributors.scss";
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Chewy|Lalezar|Montserrat|Patua+One');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lilita+One|Montserrat');
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alfa{
+    font-family: 'Lilita One', cursive;
+}

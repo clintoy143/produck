@@ -21,7 +21,7 @@
 
 .call-pos {
     margin-top: 150px;
-    background: rgba(230, 230, 230, 0.8);
+    background: rgba(230, 230, 230, 0.6);
     border-radius: 5px;
 
     
@@ -31,16 +31,36 @@
     padding: 10px;
 }
 
-.montserrat {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.alfa{
-    font-family: 'Lilita One', cursive;
-}
 
 .catch-phrase {
     text-indent: 30px;
     color:  #4d4d4d;
     font-family: 'Montserrat', sans-serif;
+}
+
+.nav-style{
+    background: rgba(0,0,0, 0.3);
+}
+
+.nav-ul{
+
+    list-style: none;
+}
+
+.nav-ul>li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.nav-ul>li>a{
+    color: #fcfdff;
+    opacity: 0.3;
+}
+
+.nav-ul>li>a:hover{
+    transition: 0.3s;
+    text-decoration: none;
+    opacity: 1;
+    
 }

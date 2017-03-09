@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224070635) do
+ActiveRecord::Schema.define(version: 20170224121733) do
 
   create_table "distributor_profiles", force: :cascade do |t|
     t.integer  "distributor_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170224070635) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
     t.index ["email"], name: "index_distributors_on_email"
   end
 
