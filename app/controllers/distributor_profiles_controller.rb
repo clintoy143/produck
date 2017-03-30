@@ -1,8 +1,8 @@
 class DistributorProfilesController < ApplicationController
-    before_action :authorize_distributor
-    
+   
     def new
         @profile = DistributorProfile.new
+        @distributor = Distributor.find(params[:distributor_id])
     end
     
     def create

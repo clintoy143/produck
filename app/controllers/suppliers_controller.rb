@@ -15,7 +15,7 @@ class SuppliersController < ApplicationController
     def create
         @supplier = Supplier.create(supplier_params)
         if @supplier.save
-            redirect_to root_path
+            redirect_to supplier_path(@supplier)
         else
             render "new"
         end

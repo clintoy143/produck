@@ -31,16 +31,22 @@
 </nav>
 
 <!-- Page Content -->
+<%if @supplier.supplier_profile.blank? %>
+
 <div class="container">
 
     <div class="row">
 
+            <%= link_to "Create Profile", new_supplier_supplier_profile_path(@supplier) %>
+<% else %>
         <div class="col-md-3">
             <p class="lead"><%= @supplier.supplier_profile.store_name%></p>
+    
             <div class="list-group">
                 <a href="#" class="list-group-item">Category 1</a>
                 <a href="#" class="list-group-item">Category 2</a>
                 <a href="#" class="list-group-item">Category 3</a>
+                
             </div>
         </div>
 
@@ -115,3 +121,4 @@
     </footer>
 
 </div>
+<%end%>
